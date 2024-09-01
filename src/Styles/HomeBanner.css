@@ -1,0 +1,38 @@
+.homeBannerSection{
+    position: relative;
+}
+
+.homeBannerSection .swiper{
+    overflow: inherit !important;
+}
+
+.homeBannerSection .swiper .item{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.homeBannerSection *{
+    outline: none !important;
+}
+
+.homeBannerSection .slick-arrow{
+    position: absolute;
+    top:45%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px !important;
+    height: 30px !important;
+    background: #000;
+    border-radius: 100%;
+}
+
+.homeBannerSection .slick-arrow.slick-next{
+    right: 25px !important;
+}
+
+.homeBannerSection .slick-arrow.slick-prev{
+    left: 25px !important;
+}
+

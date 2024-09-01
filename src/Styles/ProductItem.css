@@ -1,0 +1,105 @@
+.productItem{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,0.1); 
+    cursor: pointer;
+    position: relative; 
+}
+.productItem .badge{
+    display: inline-block;
+    padding: 7px 10px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 100;
+}
+.productItem .info{
+    padding: 15px;
+}
+.productItem .info h4{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.productItem .info .oldPrice{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.2);
+    text-decoration: line-through;
+}
+
+.productItem .info .netPrice{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.4);
+}
+
+.productItem .actions{
+    position: absolute;
+    top:20px;
+    right: -100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.productItem .actions button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px !important;
+    height: 40px !important;
+    width: 40px !important;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.3s !important;
+}
+
+.productItem .actions button svg{
+    color: black;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.productItem .actions button:hover{
+    background: #233a95 !important;
+}
+.productItem .actions button:hover svg{
+    color:#fff !important;
+}
+
+.productItem .imgWrapper{
+    overflow: hidden;
+}
+
+.productItem .imgWrapper img{
+    transition: all 0.3s ease-in-out;
+}
+
+.productItem .imgWrapper:hover .actions{
+    opacity: 1;
+    right: 10px;
+}
+
+.productItem .imgWrapper:hover img{
+    transform: scale(1.1);
+}
+
+.product_row .productItem{
+    border-right: 1px solid transparent !important ;
+}
+
+.product_row .swiper-slide:last-child .productItem{
+    border: 1px solid rgba(0,0,0,0.1) !important;  
+}
+
+.swiper{
+    padding-right: 1px !important;
+}
+
+.badge-primary{
+    background: #2bbef9 !important;
+}
