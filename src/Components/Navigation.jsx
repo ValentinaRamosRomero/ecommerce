@@ -12,7 +12,7 @@ export const Navigation = () => {
 
   const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
 
- 
+
   return (
     <>
       <nav>
@@ -30,7 +30,7 @@ export const Navigation = () => {
                 <div className={`sidebarNav ${isopenSidebarVal === true ? "open" : ""}`}>
                   <ul>
                     <li>
-                      <Link to="/"><Button>Men<FaAngleRight className="ml-auto"/></Button></Link>
+                      <Link to="/"><Button>Frutas y Verduras<FaAngleRight className="ml-auto" /></Button></Link>
                       <div className="submenu">
                         <Link to="/"><Button>clothing</Button></Link>
                         <Link to="/"><Button>footwear</Button></Link>
@@ -38,7 +38,7 @@ export const Navigation = () => {
                       </div>
                     </li>
                     <li>
-                      <Link to="/"><Button>Women</Button></Link>
+                      <Link to="/"><Button>Bebidas y Pasabocas</Button></Link>
                       <div className="submenu">
                         <Link to="/"><Button>clothing</Button></Link>
                         <Link to="/"><Button>footwear</Button></Link>
@@ -46,10 +46,10 @@ export const Navigation = () => {
                       </div>
                     </li>
                     <li>
-                      <Link to="/"><Button>Watches</Button></Link>
+                      <Link to="/"><Button>Dulces y chocolatería</Button></Link>
                     </li>
                     <li>
-                      <Link to="/"><Button>Kids</Button></Link>
+                      <Link to="/"><Button>Lacteos y Refrigerados</Button></Link>
                     </li>
                     <li>
                       <Link to="/"><Button>Gift</Button></Link>
@@ -65,7 +65,7 @@ export const Navigation = () => {
                   <Button> Home</Button></Link></li>
 
                 <li className="list-inline-item"><Link to="/">
-                  <Button>Men</Button></Link>
+                  <Button>Frutas y Verduras</Button></Link>
                   <div className="submenu shadow">
                     <Link to="/"><Button>clothing</Button></Link>
                     <Link to="/"><Button>footwear</Button></Link>
@@ -74,7 +74,7 @@ export const Navigation = () => {
                 </li>
 
                 <li className="list-inline-item"><Link to="/">
-                  <Button>Women</Button></Link>
+                  <Button>Bebidas y Pasabocas</Button></Link>
                   <div className="submenu shadow">
                     <Link to="/"><Button>clothing</Button></Link>
                     <Link to="/"><Button>footwear</Button></Link>
@@ -82,16 +82,7 @@ export const Navigation = () => {
                   </div>
                 </li>
                 <li className="list-inline-item"><Link to="/">
-                  <Button>Beauty</Button></Link>
-                  <div className="submenu shadow">
-                    <Link to="/"><Button>clothing</Button></Link>
-                    <Link to="/"><Button>footwear</Button></Link>
-                    <Link to="/"><Button>watches</Button></Link>
-                  </div>
-                </li>
-
-                <li className="list-inline-item"><Link to="/">
-                  <Button>Watches</Button></Link>
+                  <Button>Dulces y chocolatería</Button></Link>
                   <div className="submenu shadow">
                     <Link to="/"><Button>clothing</Button></Link>
                     <Link to="/"><Button>footwear</Button></Link>
@@ -100,16 +91,7 @@ export const Navigation = () => {
                 </li>
 
                 <li className="list-inline-item"><Link to="/">
-                  <Button>Kids</Button></Link>
-                  <div className="submenu shadow">
-                    <Link to="/"><Button>clothing</Button></Link>
-                    <Link to="/"><Button>footwear</Button></Link>
-                    <Link to="/"><Button>watches</Button></Link>
-                  </div>
-                </li>
-
-                <li className="list-inline-item"><Link to="/">
-                  <Button>Blog</Button></Link>
+                  <Button>Lacteos y Refrigerados</Button></Link>
                   <div className="submenu shadow">
                     <Link to="/"><Button>clothing</Button></Link>
                     <Link to="/"><Button>footwear</Button></Link>

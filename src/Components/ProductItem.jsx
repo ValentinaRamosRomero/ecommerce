@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import "../Styles/ProductItem.css";
 import lechera from "../Images/lechera.jpg";
 import { Button } from '@mui/material';
 import { TfiFullscreen } from "react-icons/tfi";
 import Rating from '@mui/material/Rating';
 import { FaRegHeart } from "react-icons/fa";
+import { ProductModal } from './ProductModal';
+import { MyContext } from '../App';
 
 
 export const ProductItem = () => {
+
+   const context = useContext(MyContext);
+
+    const viewProductsDetails=(id)=>{
+        context.setisOpenProductModal(true);
+    }
+
+    
     return (
         <>
             <div className='item productItem'>
@@ -15,7 +25,7 @@ export const ProductItem = () => {
                     <img src={lechera} />
                     <span className='badge badge-primary'>28%</span>
                     <div className='actions'>
-                        <Button><TfiFullscreen /></Button>
+                        <Button onClick={()=>viewProductsDetails(1)}><TfiFullscreen /></Button>
                         <Button><FaRegHeart style={{fontSize:'20px'}}/></Button>
                     </div>
                 </div>
@@ -31,6 +41,8 @@ export const ProductItem = () => {
                 </div>
 
             </div>
+
+           
 
          
         </>

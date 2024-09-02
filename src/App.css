@@ -5,6 +5,7 @@
 *{
   margin: 0px;
   padding: 0;
+  font-family:"Lato, sans-serif";
 }
 
 
@@ -16,7 +17,7 @@ body{
 }
 
 .bg-purple{
-  background: #8e00a3;
+  background: #accf93;
 }
 
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important;}
