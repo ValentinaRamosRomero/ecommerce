@@ -80,16 +80,22 @@
     background: #233a95 !important;
     color: #fff !important;
     text-transform: capitalize;
+    font-weight: 600 !important;
+    padding: 5px 15px !important;
 }
 
-.bg-big{
-    font-size: 17px !important;
+.btn-big{
+    font-size: 15px !important;
     padding: 7px 30px !important;
     min-width: auto !important;
+    font-weight: bold !important;
 }
 
 .btn-round{
     border-radius: 30px !important;
+}
+.btn-blue svg{
+    font-size: 22px;
 }
 
 button{

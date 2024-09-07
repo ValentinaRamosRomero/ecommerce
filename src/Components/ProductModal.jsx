@@ -1,7 +1,7 @@
 import { Button, Dialog, Rating } from '@mui/material'
 import React, { useContext, useRef, useState } from 'react';
 import "../Styles/ProductModal.css";
-import { IoClose } from 'react-icons/io5'
+import { IoCartSharp, IoClose } from 'react-icons/io5'
 import Slider from 'react-slick';
 import LecheritaBack from "../Images/LecheritaBack.webp";
 import InnerImageZoom from 'react-inner-image-zoom';
@@ -10,6 +10,7 @@ import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { MyContext } from '../App';
+import { QuantityBox } from './QuantityBox';
 
 
 export const ProductModal = (props) => {
@@ -36,17 +37,7 @@ export const ProductModal = (props) => {
         arrows: false,
     };
 
-    const [inputVal, setinputVal] = useState(1);
-
-    const minus = () => {
-        if (inputVal > 0) {
-            setinputVal(inputVal - 1);
-        }
-    }
-
-    const plus = () => {
-        setinputVal(inputVal + 1);
-    }
+    
 
     return (
         <>
@@ -90,12 +81,9 @@ export const ProductModal = (props) => {
                         <p className='mt-3'>Leche condensada LA LECHERA Lata (90 gr)</p>
 
                         <div className='d-flex align-items-center'>
-                            <div className='quantityDrop d-flex align-items-center'>
-                                <Button onClick={minus}><FaMinus /></Button>
-                                <input type="text" value={inputVal} />
-                                <Button onClick={plus}><FaPlus /></Button>
-                            </div>
-                            <Button className='btn-blue btn-lg btn-big btn-round'>Agregar al carrito</Button>
+                            <QuantityBox/>
+                            <Button className='btn-blue btn-lg btn-big btn-round'>
+                            <IoCartSharp/>Agregar al carrito</Button>
 
                         </div>
 

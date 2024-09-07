@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo from '../Images/logo.png';
+import logo from '../Images/logo.avif';
 import { Link } from 'react-router-dom';
 import { HiOutlineUser } from "react-icons/hi2";
 import { PiShoppingCartThin } from "react-icons/pi";
@@ -7,12 +7,13 @@ import { CountryDropDown } from './CountryDropDown';
 import { SearchBox } from './SearchBox';
 import { Navigation } from './Navigation';
 import { MyContext } from '../App';
+import { Button } from '@mui/material';
 
 
 export const Header = () => {
 
   const context = useContext(MyContext)
-  
+
   return (
     <>
       <div className='headerWrapper'>
@@ -26,21 +27,29 @@ export const Header = () => {
 
         <div className='header'>
           <div className='container'>
-            <div className='row'>
+            <div className='row '>
               <div className='logoWrapper d-flex align-items-center col-sm-2'>
                 <Link to={'/'}><img src={logo} alt='logo' /></Link>
               </div>
 
               <div className='col-sm-10 d-flex align-items-center part2'>
                 {
-                  context.countryList.length!==0 && <CountryDropDown />
+                  context.countryList.length !== 0 && <CountryDropDown />
                 }
-                
-                <SearchBox/>
+
+                <SearchBox />
                 <div className='part3 d-flex align-items-center ml-auto'>
-                  <button className='circle mr-3'><HiOutlineUser /></button>
+                  {
+                    context.isLogin !== true ?
+                      <Link to="/signIn">
+                        <Button className='btn-blue btn-round mr-3'>Ingresar</Button>
+                      </Link>
+                      :
+                      <Button className='circle mr-3'><HiOutlineUser /></Button>
+                  }
+
                   <div className='ml-auto cartTab d-flex align-items-center'>
-                    <span className='price'>$3.29</span>
+                    <span className='price'>$3.200</span>
                     <div className='position-relative ml-2'>
                       <button className='circle'><PiShoppingCartThin /></button>
                       <span className='count d-flex align-items-center justify-content-center'>1</span>
@@ -52,8 +61,8 @@ export const Header = () => {
           </div>
         </div>
 
-        <Navigation/>
-        
+        <Navigation />
+
 
       </div>
     </>

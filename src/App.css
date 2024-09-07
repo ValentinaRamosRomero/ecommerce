@@ -17,11 +17,11 @@ body{
 }
 
 .bg-purple{
-  background: #accf93;
+  background: #0dc3f0;
 }
 
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important;}
-::-webkit-scrollbar-thumb{background: #ccc !important;}
+::-webkit-scrollbar-thumb{background: #7b7777 !important;}
 
 .headerWrapper{
   border-bottom: 1px solid rgba(0,0,0,0.2);
@@ -44,7 +44,7 @@ body{
 }
 
 .logoWrapper img{
-  width: 100%;
+  width: 90% !important;
 }
 
 .headerWrapper .header .part2 .countryDrop{
@@ -55,6 +55,7 @@ body{
   justify-content: flex-start !important;
   border-radius: 7px;
   padding: 10px 20px !important ;
+
 }
 
 .headerWrapper .header .part2 .countryDrop .label{
@@ -72,7 +73,7 @@ body{
 }
 
 .headerSearch{
-  width: 60%;
+  width: 55%;
   height: 50px;
   background: #f3f4f7;
   padding: 5px;

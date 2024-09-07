@@ -9,7 +9,7 @@ import { ProductModal } from './ProductModal';
 import { MyContext } from '../App';
 
 
-export const ProductItem = () => {
+export const ProductItem = (props) => {
 
    const context = useContext(MyContext);
 
@@ -20,7 +20,7 @@ export const ProductItem = () => {
     
     return (
         <>
-            <div className='item productItem'>
+            <div className={`productItem ${props.itemView}`}>
                 <div className='imgWrapper'>
                     <img src={lechera} />
                     <span className='badge badge-primary'>28%</span>
